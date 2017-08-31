@@ -24,4 +24,14 @@ public class LayersManager : MonoBehaviour {
 			paintingLayers [index].transform.SetSiblingIndex (4); 
 		}
 	}
+
+	public void ToggleVisibility(int index){
+
+		if (!paintingLayers [index].activeSelf) {
+			paintingLayers [index].SetActive (true); 
+		}
+		else
+			paintingLayers [index].SetActive (false); 
+
+	}
 }

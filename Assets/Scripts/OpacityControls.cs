@@ -5,16 +5,17 @@ using UnityEngine.UI;
 
 public class OpacityControls : MonoBehaviour {
 
+	CanvasGroup CG; 
+	public Slider slider; 
+	float slideAlpha; 
 
-
-
-	// Use this for initialization
 	void Start () {
-		
+		CG = GetComponent<CanvasGroup> (); 
 	}
 	
-	// Update is called once per frame
 	void Update () {
 		
+		slideAlpha = slider.value; 
+		CG.alpha = slideAlpha; 
 	}
 }
